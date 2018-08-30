@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Pet Connector</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,6 +12,16 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <h1>Pet Connector</h1>
+       <p id="message"></p>
+      <form id="sign-up" class="">
+        <fieldset>
+          <legend>Sign up!</legend>
+          <input type="text" name="credentials[email]" placeholder="Email">
+          <input type="password" name="credentials[password]" placeholder="Password">
+          <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+          <input type="submit" value="Sign up!">
+        </fieldset>
+      </form>
     </body>
 </html>
