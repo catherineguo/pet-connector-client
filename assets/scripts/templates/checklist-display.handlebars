@@ -1,0 +1,17 @@
+{{#each checklists as |checklist|}}
+  {{log checklist}}
+  <div>
+    <h1 data-id="{{checklist.id}}"> <small>Title: {{checklist.title}}</small></h1>
+    <section data-id="{{checklist.id}}">
+      <p>
+        Start date: {{checklist.start_date}}
+        <br>
+        End date: {{checklist.end_date}}
+        <br>
+        Pet Name: {{checklist.pet_name}}
+        <br>
+        Instructions: {{checklist.instructions}}
+      </p>
+    </section>
+  </div>
+{{/each}}

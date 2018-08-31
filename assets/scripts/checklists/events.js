@@ -8,13 +8,22 @@ const onCreateList = function (event) {
   event.preventDefault()
 
   const data = getFormFields(this)
+  console.log('Data is: ', data)
   api.createList(data)
     .then(ui.createListSuccess)
     .catch(ui.createListFailure)
 }
 
+const onGetLists = function (event) {
+  event.preventDefault()
+  api.getLists()
+    .then(ui.getChecklistsSuccess)
+    .catch(ui.getChecklistsFailure)
+}
+
 const addHandlers = () => {
   $('.create-checklist').on('submit', onCreateList)
+  $('#show-checklists').on('click', onGetLists)
 }
 
 module.exports = {
