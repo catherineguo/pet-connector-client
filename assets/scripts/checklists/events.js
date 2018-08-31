@@ -23,7 +23,7 @@ const onGetLists = function (event) {
 
 const onHideLists = () => {
   event.preventDefault()
-  ui.hideBooks()
+  ui.hideLists()
 }
 
 const addHandlers = () => {
