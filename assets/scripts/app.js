@@ -7,8 +7,10 @@
 // require('./example')
 
 const authEvents = require('./auth/events.js')
+const checklistEvents = require('./checklists/events.js')
 
 $(() => {
   authEvents.landingPageInit()
   authEvents.addHandlers()
+  checklistEvents.addHandlers()
 })

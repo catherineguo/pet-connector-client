@@ -21,12 +21,13 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link change-password-link" href="#" data-toggle="modal" data-target=".bd-example-modal-md">Change Password</a>
+            <a class="nav-link change-password-link" href="#" data-toggle="modal" data-target=".password-modal">Change Password</a>
           </li>
           <li class="nav-item">
             <a class="nav-link sign-out" href="#">Sign Out</a>
           </li>
         </ul>
+        <button class="btn btn-success my-2 my-sm-0" type="button" data-toggle="modal" data-target=".new-checklist-modal">New Checklist</button>
       </div>
     </nav>
     <!-- END: Navbar layout -->
@@ -77,7 +78,7 @@
 
     <!-- START: Dashboard layout -->
     <!-- Change password modal -->
-    <div class="modal fade bd-example-modal-md" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal fade bd-example-modal-md password-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-md">
         <div class="modal-content">
             <form class="change-password">
@@ -87,6 +88,25 @@
                 <input type="password" class="form-control input-lg" name="passwords[old]" placeholder="Current Password">
                 <input type="password" class="form-control input-lg" name="passwords[new]" placeholder="New Password">
                 <button type="submit" class="btn btn-primary">Change Password</button>
+              </div>
+            </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Create new list modal -->
+    <div class="modal fade bd-example-modal-md new-checklist-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <form class="create-checklist">
+              <h2>New Checklist</h2>
+              <div class="form-group">
+                <input type="text" class="form-control input-lg" name="checklists[title]" placeholder="Title">
+                <input type="text" class="form-control input-lg" name="checklists[start_date]" placeholder="YYYY/MM/DD">
+                <input type="text" class="form-control input-lg" name="checklists[end_date]" placeholder="YYYY/MM/DD">
+                <input type="text" class="form-control input-lg" name="checklists[pet_name]" placeholder="Pet Name">
+                <textarea class="form-control" name="checklists[instructions]" placeholder="Instructions for pet sitter."></textarea>
+                <button type="submit" class="btn btn-primary">Create Checklist</button>
               </div>
             </form>
         </div>
