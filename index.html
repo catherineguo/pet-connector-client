@@ -12,42 +12,78 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Pet Connector</h1>
-       <p id="message"></p>
-      <form id="sign-up" class="">
-        <fieldset>
-          <legend>Sign up!</legend>
-          <input type="text" name="credentials[email]" placeholder="Email">
-          <input type="password" name="credentials[password]" placeholder="Password">
-          <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
-          <input type="submit" value="Sign up!">
-        </fieldset>
-      </form>
 
-      <form id="sign-in" class="border">
-        <fieldset>
-          <legend>Sign in!</legend>
-          <input type="text" name="credentials[email]" placeholder="Email">
-          <input type="password" name="credentials[password]" placeholder="Password">
-          <input type="submit" value="Sign in!">
-        </fieldset>
-      </form>
+    <nav class="navbar navbar-expand-sm navbar-light mb-4" style="background-color: #e3f2fd;">
+      <a class="navbar-brand" href="#">Pet Connector</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Disabled</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-      <form id="sign-out" class="border">
-        <fieldset>
-          <legend>Sign Out!</legend>
-          <input type="submit" value="Sign out!">
-        </fieldset>
-      </form>
+    <p id="message"></p>
 
-      <form id="change-password" class="border">
-        <fieldset>
-          <legend>Change Password!</legend>
-          <input type="password" name="passwords[old]" placeholder="Old Password">
-          <input type="password" name="passwords[new]" placeholder="New Password">
-          <input type="submit" value="Change Password!">
-        </fieldset>
-      </form>
+    <div class="row landing-page">
+      <div class="col-sm-6 pet-connector-title">
+        <h1>PetConnector</h1>
+        <p>Save checklists to share with your pet sitters</p>
+      </div>
 
-    </body>
+      <div class="col-sm-6">
+        <section class="sign-up-container">
+          <h2>Sign Up</h2>
+          <form class="form-signin" id='sign-up'>
+            <fieldset>
+              <input type="email" class="form-control input-lg" name="credentials[email]" placeholder="Email">
+              <input type="password" class="form-control input-lg" id="password" name="credentials[password]" placeholder="Password">
+              <input type="password" class="form-control input-lg" id="confirm-password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+              <button type="submit" class="btn btn-lg btn-primary btn-block">Sign Up</button>
+            </fieldset>
+          </form>
+          <a href="#" id="back-to-signin">Take me back to sign-in page</a>
+        </section>
+
+        <section class="sign-in-container">
+          <h2>Sign In</h2>
+          <form class="form-signin" id='sign-in'>
+            <fieldset>
+              <input type="email" class="form-control input-lg" name="credentials[email]" placeholder="Email">
+              <input type="password" class="form-control input-lg" name="credentials[password]" placeholder="Password">
+              <button type="submit" class="btn btn-lg btn-primary btn-block">Sign In</button>
+            </fieldset>
+          </form>
+          <a href="#" id="sign-up-link">I need to sign up for an account</a>
+        </section>
+      </div>
+    </div>
+
+    <form id="sign-out" class="border">
+      <fieldset>
+        <legend>Sign Out!</legend>
+        <input type="submit" value="Sign out!">
+      </fieldset>
+    </form>
+
+    <form id="change-password" class="border">
+      <fieldset>
+        <legend>Change Password!</legend>
+        <input type="password" name="passwords[old]" placeholder="Old Password">
+        <input type="password" name="passwords[new]" placeholder="New Password">
+        <input type="submit" value="Change Password!">
+      </fieldset>
+    </form>
+
+  </body>
 </html>
