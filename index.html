@@ -12,7 +12,7 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-
+    <!-- START: Navbar layout -->
     <nav class="navbar navbar-expand-sm navbar-light mb-4" style="background-color: #e3f2fd;" id="navbar">
       <a class="navbar-brand" href="#">Pet Connector</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,16 +29,22 @@
         </ul>
       </div>
     </nav>
+    <!-- END: Navbar layout -->
 
+    <!-- START: Container for error messages to the user -->
     <section class="alert-container" id="message">
     </section>
+    <!-- END: Container for error messages to the user -->
 
+    <!-- START: Landing page / sign in page layout  -->
+    <!-- Title / subtitle on left -->
     <div class="row landing-page">
       <div class="col-sm-6 pet-connector-title">
         <h1>PetConnector</h1>
         <p>Save checklists to share with your pet sitters</p>
       </div>
 
+      <!-- Sign up form -->
       <div class="col-sm-6">
         <section class="sign-up-container" id="sign-up-container">
           <h2>Sign Up</h2>
@@ -53,6 +59,7 @@
           <a href="#" id="back-to-signin">I already have an account</a>
         </section>
 
+        <!-- Sign in form -->
         <section class="sign-in-container" id="sign-in-container">
           <h2>Sign In</h2>
           <form class="form-signin" id='sign-in'>
@@ -66,7 +73,10 @@
         </section>
       </div>
     </div>
+    <!-- END: Landing page / sign in page layout  -->
 
+    <!-- START: Dashboard layout -->
+    <!-- Change password modal -->
     <div class="modal fade bd-example-modal-md" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-md">
         <div class="modal-content">
@@ -82,5 +92,6 @@
         </div>
       </div>
     </div>
+    <!-- END: Dashboard layout -->
   </body>
 </html>

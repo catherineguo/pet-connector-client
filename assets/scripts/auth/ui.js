@@ -46,21 +46,19 @@ const signOutSuccess = function () {
   store.user = null
 }
 
-const signOutFailure = function (error) {
-  $('#message').text('Error on sign out')
-  $('#message').removeClass()
-  $('#message').addClass('failure')
-  console.error('signOutFailure ran. Error is :', error)
+const signOutFailure = function () {
+  $('#message').html('').removeClass('alert alert-success').removeClass('alert alert-danger')
+  $('#message').html('<p>Sign out failed.</p>').addClass('alert alert-danger')
 }
 
 const changePasswordSuccess = function () {
   $('.password-message').text('Changed password successfully')
-  console.log('changePasswordSuccess ran and nothing was returned!')
+  $('.change-password input').val('')
 }
 
-const changePasswordFailure = function (error) {
+const changePasswordFailure = function () {
   $('.password-message').text('Error on change password')
-  console.error('changePasswordFailure ran. Error is :', error)
+  $('.change-password input').val('')
 }
 
 module.exports = {
