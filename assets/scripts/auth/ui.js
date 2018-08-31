@@ -29,6 +29,7 @@ const signInSuccess = function (data) {
   $('#message').html('').removeClass('alert alert-success').removeClass('alert alert-danger')
   $('.landing-page').hide()
   $('#navbar').show()
+  $('.dashboard-layout').show()
   store.user = data.user
 }
 
@@ -43,6 +44,7 @@ const signOutSuccess = function () {
   $('#message').html('<p>Successfully signed out.</p>').addClass('alert alert-success')
   $('.landing-page').show()
   $('#navbar').hide()
+  $('.dashboard-layout').hide()
   store.user = null
 }
 

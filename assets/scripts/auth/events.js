@@ -8,6 +8,7 @@ const ui = require('./ui')
 const landingPageInit = () => {
   $('#sign-up-container').hide()
   $('#navbar').hide()
+  $('.dashboard-layout').hide()
 }
 
 const showSignUp = (event) => {
