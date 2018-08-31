@@ -9,5 +9,6 @@
 const authEvents = require('./auth/events.js')
 
 $(() => {
+  authEvents.landingPageInit()
   authEvents.addHandlers()
 })

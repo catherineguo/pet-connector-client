@@ -5,6 +5,25 @@ const getFormFields = require(`../../../lib/get-form-fields`)
 const api = require('./api')
 const ui = require('./ui')
 
+const landingPageInit = () => {
+  $('#sign-up-container').hide()
+  $('#change-password-container').hide()
+  $('#sign-out').hide()
+  $('#change-password').hide()
+}
+
+const showSignUp = (event) => {
+  $('#sign-up-container').show()
+  $('#sign-in-container').hide()
+  $('#message').html('').removeClass('alert alert-danger')
+}
+
+const showSignIn = (event) => {
+  $('#sign-in-container').show()
+  $('#sign-up-container').hide()
+  $('#message').html('').removeClass('alert alert-danger')
+}
+
 const onSignUp = function (event) {
   event.preventDefault()
   console.log('sign up ran!')
@@ -45,6 +64,8 @@ const onChangePassword = function (event) {
 }
 
 const addHandlers = () => {
+  $('#sign-up-link').on('click', showSignUp)
+  $('#back-to-signin').on('click', showSignIn)
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
   $('#sign-out').on('submit', onSignOut)
@@ -52,5 +73,6 @@ const addHandlers = () => {
 }
 
 module.exports = {
-  addHandlers
+  addHandlers,
+  landingPageInit
 }
