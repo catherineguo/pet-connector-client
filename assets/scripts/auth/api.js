@@ -38,7 +38,6 @@ const changePassword = function (data) {
       Authorization: 'Token token=' + store.user.token
     },
     data
-    // data: data
   })
 }
 

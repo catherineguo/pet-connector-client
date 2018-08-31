@@ -21,7 +21,7 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link change-password" href="#">Change Password</a>
+            <a class="nav-link change-password-link" href="#" data-toggle="modal" data-target=".bd-example-modal-md">Change Password</a>
           </li>
           <li class="nav-item">
             <a class="nav-link sign-out" href="#">Sign Out</a>
@@ -67,14 +67,20 @@
       </div>
     </div>
 
-    <form id="change-password" class="border">
-      <fieldset>
-        <legend>Change Password!</legend>
-        <input type="password" name="passwords[old]" placeholder="Old Password">
-        <input type="password" name="passwords[new]" placeholder="New Password">
-        <input type="submit" value="Change Password!">
-      </fieldset>
-    </form>
-
+    <div class="modal fade bd-example-modal-md" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <form class="change-password">
+              <h2>Change Password</h2>
+              <p class="password-message"></p>
+              <div class="form-group">
+                <input type="password" class="form-control input-lg" name="passwords[old]" placeholder="Current Password">
+                <input type="password" class="form-control input-lg" name="passwords[new]" placeholder="New Password">
+                <button type="submit" class="btn btn-primary">Change Password</button>
+              </div>
+            </form>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

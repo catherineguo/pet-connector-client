@@ -54,16 +54,12 @@ const signOutFailure = function (error) {
 }
 
 const changePasswordSuccess = function () {
-  $('#message').text('Changed password successfully')
-  $('#message').removeClass()
-  $('#message').addClass('success')
+  $('.password-message').text('Changed password successfully')
   console.log('changePasswordSuccess ran and nothing was returned!')
 }
 
 const changePasswordFailure = function (error) {
-  $('#message').text('Error on change password')
-  $('#message').removeClass()
-  $('#message').addClass('failure')
+  $('.password-message').text('Error on change password')
   console.error('changePasswordFailure ran. Error is :', error)
 }
 
