@@ -11,7 +11,7 @@ const createList = (data) => {
     headers: {
       'Authorization': 'Token token=' + store.user.token
     },
-    data
+    data: {checklist: data}
   })
 }
 
