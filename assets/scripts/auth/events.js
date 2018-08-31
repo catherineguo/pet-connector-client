@@ -7,9 +7,6 @@ const ui = require('./ui')
 
 const landingPageInit = () => {
   $('#sign-up-container').hide()
-  $('#change-password-container').hide()
-  $('#sign-out').hide()
-  $('#change-password').hide()
   $('#navbar').hide()
 }
 
