@@ -10,6 +10,7 @@ const landingPageInit = () => {
   $('#change-password-container').hide()
   $('#sign-out').hide()
   $('#change-password').hide()
+  $('#navbar').hide()
 }
 
 const showSignUp = (event) => {
@@ -68,7 +69,7 @@ const addHandlers = () => {
   $('#back-to-signin').on('click', showSignIn)
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
-  $('#sign-out').on('submit', onSignOut)
+  $('.sign-out').on('click', onSignOut)
   $('#change-password').on('submit', onChangePassword)
 }
 

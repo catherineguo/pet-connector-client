@@ -17,25 +17,24 @@ const signUpFailure = function (error) {
 }
 
 const signInSuccess = function (data) {
-  $('#message').text('Signed in successfully')
-  $('#message').removeClass()
-  $('#message').addClass('success')
-  console.log('signInSuccess ran. Data is :', data)
+  $('#sign-in input').val('')
+  $('#message').html('').removeClass('alert alert-success').removeClass('alert alert-danger')
+  $('.landing-page').hide()
+  $('#navbar').show()
   store.user = data.user
 }
 
-const signInFailure = function (error) {
-  $('#message').text('Error on sign in')
-  $('#message').removeClass()
-  $('#message').addClass('failure')
-  console.error('signInFailure ran. Error is :', error)
+const signInFailure = function () {
+  $('#message').html('').removeClass('alert alert-success').removeClass('alert alert-danger')
+  $('#message').html('<p>Oops, try again.</p>').addClass('alert alert-danger')
+  $('#sign-in input').val('')
 }
 
 const signOutSuccess = function () {
-  $('#message').text('Signed out successfully')
-  $('#message').removeClass()
-  $('#message').addClass('success')
-  console.log('signOutSuccess ran and nothing was returned!')
+  $('#message').html('').removeClass('alert alert-success').removeClass('alert alert-danger')
+  $('#message').html('<p>Successfully signed out.</p>').addClass('alert alert-success')
+  $('.landing-page').show()
+  $('#navbar').hide()
   store.user = null
 }
 
