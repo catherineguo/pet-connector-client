@@ -20,8 +20,13 @@ const getChecklistsSuccess = (data) => {
   $('.checklists-display').html(showChecklistsHtml)
 }
 
+const hideBooks = () => {
+  $('.checklists-display').empty()
+}
+
 module.exports = {
   createListSuccess,
   createListFailure,
-  getChecklistsSuccess
+  getChecklistsSuccess,
+  hideBooks
 }

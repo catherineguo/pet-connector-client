@@ -21,9 +21,15 @@ const onGetLists = function (event) {
     .catch(ui.getChecklistsFailure)
 }
 
+const onHideLists = () => {
+  event.preventDefault()
+  ui.hideBooks()
+}
+
 const addHandlers = () => {
   $('.create-checklist').on('submit', onCreateList)
   $('#show-checklists').on('click', onGetLists)
+  $('#hide-checklists').on('click', onHideLists)
 }
 
 module.exports = {
