@@ -26,10 +26,18 @@ const onHideLists = () => {
   ui.hideLists()
 }
 
+const onDeleteList = () => {
+  event.preventDefault()
+  api.deleteList($(event.target).parent().data('id'))
+    .then(ui.deleteListSuccess)
+    .catch(ui.deleteListFailure)
+}
+
 const addHandlers = () => {
   $('.create-checklist').on('submit', onCreateList)
   $('#show-checklists').on('click', onGetLists)
   $('#hide-checklists').on('click', onHideLists)
+  $('.checklists-display').on('click', 'div div button', onDeleteList)
 }
 
 module.exports = {
