@@ -1,16 +1,17 @@
 {{#each checklists as |checklist|}}
-  {{log checklist}}
   <div class="card">
-    <div class="card-body" data-id="{{checklist.id}}">
+    <div class="card-body">
       <h4 class="card-title">Title: {{checklist.title}}</h4>
-      <p class="card-text">Start date: {{checklist.start_date}}
-        <br>
-        End date: {{checklist.end_date}}
-        <br>
-        Pet Name: {{checklist.pet_name}}
-        <br>
-        Instructions: {{checklist.instructions}}</p>
-      <button type="button" class="btn btn-primary">Delete</button>
+      <section data-id="{{checklist.id}}">
+        <p class="card-text">Start date: {{checklist.start_date}}
+          <br>
+          End date: {{checklist.end_date}}
+          <br>
+          Pet Name: {{checklist.pet_name}}
+          <br>
+          Instructions: {{checklist.instructions}}</p>
+        <button type="button" class="btn btn-primary">Delete</button>
+      </section>
     </div>
   </div>
 {{/each}}

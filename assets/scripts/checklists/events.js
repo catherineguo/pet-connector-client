@@ -10,7 +10,7 @@ const onCreateList = function (event) {
   const data = getFormFields(this)
   console.log('Data is: ', data)
   api.createList(data)
-    .then(ui.createListSuccess)
+    .then(() => onGetLists(event))
     .catch(ui.createListFailure)
 }
 
@@ -21,15 +21,16 @@ const onGetLists = function (event) {
     .catch(ui.getChecklistsFailure)
 }
 
-const onHideLists = () => {
+const onHideLists = (event) => {
   event.preventDefault()
   ui.hideLists()
 }
 
-const onDeleteList = () => {
+const onDeleteList = (event) => {
   event.preventDefault()
-  api.deleteList($(event.target).parent().data('id'))
-    .then(ui.deleteListSuccess)
+  const listId = $(event.target).parent().data('id')
+  api.deleteList(listId)
+    .then(() => onGetLists(event))
     .catch(ui.deleteListFailure)
 }
 
@@ -37,7 +38,7 @@ const addHandlers = () => {
   $('.create-checklist').on('submit', onCreateList)
   $('#show-checklists').on('click', onGetLists)
   $('#hide-checklists').on('click', onHideLists)
-  $('.checklists-display').on('click', 'div div button', onDeleteList)
+  $('.checklists-display').on('click', 'button', onDeleteList)
 }
 
 module.exports = {

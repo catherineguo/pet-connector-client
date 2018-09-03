@@ -24,7 +24,18 @@ const getLists = function () {
   })
 }
 
+const deleteList = function (id) {
+  return $.ajax({
+    url: config.apiUrl + `/checklists/${id}`,
+    method: 'DELETE',
+    headers: {
+      'Authorization': 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   createList,
-  getLists
+  getLists,
+  deleteList
 }
