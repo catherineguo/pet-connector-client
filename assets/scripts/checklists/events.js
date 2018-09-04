@@ -37,7 +37,9 @@ const onDeleteList = (event) => {
 
 const onClickEdit = (event) => {
   store.listId = $(event.target).parent().data('id')
-  console.log('store.listId is: ', store.listId)
+  api.showList(store.listId)
+    .then(ui.showChecklistSuccess)
+    .catch(ui.failure)
 }
 
 const onUpdateList = (event) => {

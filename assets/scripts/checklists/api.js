@@ -45,9 +45,20 @@ const updateList = (id, data) => {
   })
 }
 
+const showList = (id) => {
+  return $.ajax({
+    url: config.apiUrl + `/checklists/${id}`,
+    method: 'GET',
+    headers: {
+      'Authorization': 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   createList,
   getLists,
   deleteList,
-  updateList
+  updateList,
+  showList
 }
