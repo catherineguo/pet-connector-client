@@ -9,6 +9,7 @@ const onCreateList = function (event) {
   event.preventDefault()
 
   const data = getFormFields(this)
+  $('.new-checklist-modal').modal('hide')
   api.createList(data)
     .then(() => onGetLists(event))
     .catch(ui.failure)
@@ -43,6 +44,7 @@ const onUpdateList = (event) => {
   event.preventDefault()
 
   const data = getFormFields(event.target)
+  $('.update-checklist-modal').modal('hide')
   api.updateList(store.listId, data)
     .then(() => onGetLists(event))
     .catch(ui.failure)
