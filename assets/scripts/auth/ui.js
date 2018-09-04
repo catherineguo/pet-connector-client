@@ -45,6 +45,7 @@ const signOutSuccess = function () {
   $('.landing-page').show()
   $('#navbar').hide()
   $('.dashboard-layout').hide()
+  $('.checklists-display').empty()
   store.user = null
 }
 
@@ -54,12 +55,16 @@ const signOutFailure = function () {
 }
 
 const changePasswordSuccess = function () {
-  $('.password-message').text('Changed password successfully')
+  $('.password-message').text('Changed password successfully').show('fast').delay(1000).hide('fast')
+  $('#password-message').removeClass('text-danger')
+  $('#password-message').addClass('text-success')
   $('.change-password input').val('')
 }
 
 const changePasswordFailure = function () {
-  $('.password-message').text('Error on change password')
+  $('.password-message').text('Error: could not change password').show('fast')
+  $('#password-message').removeClass('text-succeess')
+  $('#password-message').addClass('text-danger')
   $('.change-password input').val('')
 }
 
