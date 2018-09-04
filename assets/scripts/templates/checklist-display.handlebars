@@ -1,7 +1,8 @@
 {{#each checklists as |checklist|}}
+<div class="col-md-4">
   <div class="card">
+  <h3 class="card-header">{{checklist.title}}</h3>
     <div class="card-body">
-      <h2 class="card-title">Title: {{checklist.title}}</h2>
       <section data-id="{{checklist.id}}">
         <p class="card-text">Start date: {{checklist.start_date}}
           <br>
@@ -15,4 +16,5 @@
       </section>
     </div>
   </div>
+</div>
 {{/each}}
