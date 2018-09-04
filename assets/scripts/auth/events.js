@@ -5,18 +5,21 @@ const getFormFields = require(`../../../lib/get-form-fields`)
 const api = require('./api')
 const ui = require('./ui')
 
+// Page elements to hide upon initial page load
 const landingPageInit = () => {
   $('#sign-up-container').hide()
   $('#navbar').hide()
   $('.dashboard-layout').hide()
 }
 
+// Function to show sign up box
 const showSignUp = (event) => {
   $('#sign-up-container').show()
   $('#sign-in-container').hide()
   $('#message').html('').removeClass('alert alert-danger')
 }
 
+// Function to show sign in box
 const showSignIn = (event) => {
   $('#sign-in-container').show()
   $('#sign-up-container').hide()
