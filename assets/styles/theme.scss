@@ -19,6 +19,9 @@ body {
 .update-checklist {
   margin-left: 45px;
   padding: 45px 15px 30px;
+  h2 {
+    margin-bottom: 20px;
+  }
 }
 
 .sign-in-container,
@@ -45,8 +48,12 @@ button {
 
 form {
   max-width: 400px;
-  input {
-    margin: 15px 0;
+  input,
+  textarea {
+    margin: 5px 0 20px;
+  }
+  label {
+    margin: 0;
   }
 }
 
