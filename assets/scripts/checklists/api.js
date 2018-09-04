@@ -34,8 +34,20 @@ const deleteList = function (id) {
   })
 }
 
+const updateList = (id, data) => {
+  return $.ajax({
+    url: config.apiUrl + `/checklists/${id}`,
+    method: 'PATCH',
+    headers: {
+      'Authorization': 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
 module.exports = {
   createList,
   getLists,
-  deleteList
+  deleteList,
+  updateList
 }

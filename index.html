@@ -114,6 +114,25 @@
       </div>
     </div>
 
+    <!-- Edit list modal -->
+    <div class="modal fade bd-example-modal-md update-checklist-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <form class="update-checklist">
+              <h2>Edit Checklist</h2>
+              <div class="form-group">
+                <input type="text" class="form-control input-lg" name="checklist[title]" placeholder="Title">
+                <input type="text" class="form-control input-lg" name="checklist[start_date]" placeholder="YYYY-MM-DD">
+                <input type="text" class="form-control input-lg" name="checklist[end_date]" placeholder="YYYY-MM-DD">
+                <input type="text" class="form-control input-lg" name="checklist[pet_name]" placeholder="Pet Name">
+                <textarea class="form-control" name="checklist[instructions]" placeholder="Instructions for pet sitter."></textarea>
+                <button type="submit" class="btn btn-primary">Update Checklist</button>
+              </div>
+            </form>
+        </div>
+      </div>
+    </div>
+
     <!-- Checklists diplayed here -->
     <center><button class="btn btn-success my-2 my-sm-0" type="button" id="show-checklists">Show All Checklists</button>
       <button class="btn btn-success my-2 my-sm-0" type="button" id="hide-checklists">Hide All Checklists</button>
