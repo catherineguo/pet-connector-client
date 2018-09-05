@@ -1,9 +1,7 @@
 # PetConnector - Client
 My second project is a full-stack web app that allows pet owners to create and save checklists to share with pet sitters.
 
-Deployed front end: https://github.com/catherineguo/pet-connector-client
-Back end repo: https://github.com/catherineguo/pet-connector-api
-Deployed back end: https://floating-lake-10570.herokuapp.com/
+Deployed front end: https://github.com/catherineguo/pet-connector-client  Back end repo: https://github.com/catherineguo/pet-connector-api  Deployed back end: https://floating-lake-10570.herokuapp.com/
 
 Technologies used in this project: JavaScript, Handlebars, jQuery, AJAX, Bootstrap, Sass, Ruby on Rails, PostgreSQL.
 
