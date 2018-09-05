@@ -28,6 +28,8 @@ To view the ERDs for this project, please refer to the back end repo: https://gi
 ## Development
 After setting up the back end using Ruby on Rails, I spent the majority of my time on this project building out the front end interface. I used Handlebars to handle (no pun intended) displaying the checklists fetched from the server. I incorporated more modals in this project than in my first one because I thought it was the best way to display the "new checklist" and "edit checklist" forms. At first, when I created the "edit checklist" form, I left the fields blank, which inevitably led to the problem of blank fields overwriting fields that already had data. I realized I could populate the fields in the edit form by making a GET request for the specific checklist and populating the fields with the data currently in the database.
 
+Overall, I'm quite pleased with how the front end turned out (mostly thanks to Bootstrap for styling).
+
 ## Unsolved Problems
 - "New Checklist" button changes to green color when clicked because it is a modified Bootstrap Success button.
 - Order of checklists seems random (not sorted by ID, date created, date updated, etc.)
