@@ -1,9 +1,10 @@
 'use strict'
 
 const getFormFields = require(`../../../lib/get-form-fields`)
-
 const api = require('./api')
 const ui = require('./ui')
+const listApi = require('../checklists/api.js')
+const listUi = require('../checklists/ui.js')
 
 // Page elements to hide upon initial page load
 const landingPageInit = () => {
@@ -41,6 +42,8 @@ const onSignIn = function (event) {
   const data = getFormFields(this)
   api.signIn(data)
     .then(ui.signInSuccess)
+    .then(listApi.getLists)
+    .then(listUi.getChecklistsSuccess)
     .catch(ui.signInFailure)
 }
 
