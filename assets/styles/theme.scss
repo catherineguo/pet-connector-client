@@ -1,10 +1,11 @@
 body {
+  font-family: 'Roboto', sans-serif;
   font-size: $body-font-size;
   line-height: $body-line-height;
-  font-family: 'Roboto', sans-serif;
 }
 
 .landing-page {
+  color: $black-font-color;
   margin: $margin;
 }
 
@@ -21,6 +22,7 @@ body {
   margin-left: 45px;
   padding: 45px 15px 30px;
   h2 {
+    color: $black-font-color;
     margin-bottom: 20px;
   }
 }
@@ -30,6 +32,9 @@ body {
   margin-top: 25px;
   form {
     margin-bottom: 5px;
+  }
+  h2{
+    color: $black-font-color;
   }
 }
 
@@ -41,6 +46,11 @@ h1 {
 h2 {
   font-size: $subheader-font-size;
   line-height: $subheader-line-height;
+}
+
+h3 {
+  color: $black-font-color;
+  font-weight: $bold-font-weight;
 }
 
 button {
@@ -61,6 +71,13 @@ form {
 .navbar {
   padding-left: 50px;
   padding-right: 50px;
+  a {
+    font-size: 16px;
+  }
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: $black-font-color !important;
 }
 
 .pet-connector-title {
@@ -72,6 +89,7 @@ form {
     margin-top: 25px;
   }
   p {
+    color: $black-font-color;
     margin: 5px;
   }
 }
@@ -81,5 +99,32 @@ form {
 }
 
 .checklists-display {
+  color: $black-font-color;
   margin: 0 50px;
+}
+
+.logo {
+  img {
+    height: auto;
+    width: 200px;
+  }
+}
+
+.card,
+.modal-content {
+  border-radius: 0;
+}
+
+.card {
+  p {
+    padding-left: 20px;
+  }
+}
+
+.delete-edit-buttons {
+  padding-left: 20px;
+}
+
+.card-header {
+  text-align: center;
 }

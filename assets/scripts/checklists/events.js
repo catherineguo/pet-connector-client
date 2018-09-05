@@ -29,14 +29,14 @@ const onHideLists = (event) => {
 
 const onDeleteList = (event) => {
   event.preventDefault()
-  const listId = $(event.target).parent().data('id')
+  const listId = $(event.target).closest('section').data('id')
   api.deleteList(listId)
     .then(() => onGetLists(event))
     .catch(ui.failure)
 }
 
 const onClickEdit = (event) => {
-  store.listId = $(event.target).parent().data('id')
+  store.listId = $(event.target).closest('section').data('id')
   api.showList(store.listId)
     .then(ui.showChecklistSuccess)
     .catch(ui.failure)

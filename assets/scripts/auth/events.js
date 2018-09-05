@@ -61,6 +61,10 @@ const onChangePassword = function (event) {
     .catch(ui.changePasswordFailure)
 }
 
+const onClickChangePassword = function (event) {
+  $('.password-message').text('')
+}
+
 const addHandlers = () => {
   $('#sign-up-link').on('click', showSignUp)
   $('#back-to-signin').on('click', showSignIn)
@@ -68,6 +72,7 @@ const addHandlers = () => {
   $('#sign-in').on('submit', onSignIn)
   $('.sign-out').on('click', onSignOut)
   $('.change-password').on('submit', onChangePassword)
+  $('.change-password-link').on('click', onClickChangePassword)
 }
 
 module.exports = {

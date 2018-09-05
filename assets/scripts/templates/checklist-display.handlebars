@@ -4,15 +4,19 @@
   <h3 class="card-header">{{checklist.title}}</h3>
     <div class="card-body">
       <section data-id="{{checklist.id}}">
-        <p class="card-text">Start date: {{checklist.start_date}}
+        <p class="card-text"><strong>Start date:</strong> {{checklist.start_date}}
           <br>
-          End date: {{checklist.end_date}}
+          <strong>End date:</strong> {{checklist.end_date}}
           <br>
-          Pet Name: {{checklist.pet_name}}
+          <strong>Pet Name:</strong> {{checklist.pet_name}}
           <br>
-          Instructions: {{checklist.instructions}}</p>
-        <button type="button" class="btn btn-primary" id="delete-button">Delete</button>
-        <button class="btn btn-primary" type="button" data-toggle="modal" data-target=".update-checklist-modal" id="edit-button">Edit</button>
+          <strong>Instructions:</strong>
+          <br>
+          {{checklist.instructions}}</p>
+        <div class="delete-edit-buttons">
+          <button type="button" class="btn btn-outline-danger" id="delete-button">Delete</button>
+          <button class="btn btn-outline-primary" type="button" data-toggle="modal" data-target=".update-checklist-modal" id="edit-button">Edit</button>
+        </div>
       </section>
     </div>
   </div>
