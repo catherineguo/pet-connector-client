@@ -1,18 +1,19 @@
 {{#each checklists as |checklist|}}
-<div class="col-md-4">
+<div class="col-md-6">
   <div class="card">
   <h3 class="card-header">{{checklist.title}}</h3>
     <div class="card-body">
       <section data-id="{{checklist.id}}">
         <p class="card-text"><strong>Start date:</strong> {{checklist.start_date}}
-          <br>
+          <hr>
           <strong>End date:</strong> {{checklist.end_date}}
-          <br>
+          <hr>
           <strong>Pet Name:</strong> {{checklist.pet_name}}
-          <br>
+          <hr>
           <strong>Instructions:</strong>
-          <br>
-          {{checklist.instructions}}</p>
+            <p style="white-space: pre-wrap;">{{checklist.instructions}}</p>
+          <hr>
+          </p>
         <div class="delete-edit-buttons">
           <button type="button" class="btn btn-outline-danger" id="delete-button">Delete</button>
           <button class="btn btn-outline-primary" type="button" data-toggle="modal" data-target=".update-checklist-modal" id="edit-button">Edit</button>
