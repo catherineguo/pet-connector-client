@@ -131,3 +131,19 @@ form {
 .card-header {
   text-align: center;
 }
+
+.paw-print {
+  height: auto;
+  margin-top: 25px;
+  width: 150px;
+}
+
+.new-checklist-button {
+  background-color: #FF7F00;
+  border-color: #FF7F00;
+}
+
+.new-checklist-button:hover {
+  background-color: darken(#FF7F00, 10%);
+  border-color: darken(#FF7F00, 10%);
+}
