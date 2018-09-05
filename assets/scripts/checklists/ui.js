@@ -13,7 +13,11 @@ const failure = function () {
 
 const getChecklistsSuccess = (data) => {
   const showChecklistsHtml = showChecklistsTemplate({ checklists: data.checklists })
-  $('.checklists-display').html(showChecklistsHtml)
+  if (data.checklists.length > 0) {
+    $('.checklists-display').html(showChecklistsHtml)
+  } else {
+    $('.checklists-display').html('<p>You have no checklists. Create a new one now!</p>')
+  }
   $('.new-checklist-modal input').val('')
   $('.update-checklist-modal input').val('')
   $('.new-checklist-modal textarea').val('')
