@@ -6,13 +6,6 @@ const ui = require('./ui')
 const listApi = require('../checklists/api.js')
 const listUi = require('../checklists/ui.js')
 
-// Page elements to hide upon initial page load
-const landingPageInit = () => {
-  $('#sign-up-container').hide()
-  $('#navbar').hide()
-  $('.dashboard-layout').hide()
-}
-
 // Function to show sign up box
 const showSignUp = (event) => {
   $('#sign-up-container').show()
@@ -79,6 +72,5 @@ const addHandlers = () => {
 }
 
 module.exports = {
-  addHandlers,
-  landingPageInit
+  addHandlers
 }
