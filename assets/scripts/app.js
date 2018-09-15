@@ -10,7 +10,7 @@ const authEvents = require('./auth/events.js')
 const checklistEvents = require('./checklists/events.js')
 
 $(() => {
-  $('.paw-print').show()
+  $('html').show()
   authEvents.addHandlers()
   checklistEvents.addHandlers()
 })
