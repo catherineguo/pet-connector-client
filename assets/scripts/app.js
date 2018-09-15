@@ -12,4 +12,5 @@ const checklistEvents = require('./checklists/events.js')
 $(() => {
   authEvents.addHandlers()
   checklistEvents.addHandlers()
+  $('.paw-print').show()
 })
