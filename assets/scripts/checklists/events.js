@@ -22,11 +22,6 @@ const onGetLists = function (event) {
     .catch(ui.failure)
 }
 
-const onHideLists = (event) => {
-  event.preventDefault()
-  ui.hideLists()
-}
-
 const onDeleteList = (event) => {
   event.preventDefault()
   const listId = $(event.target).closest('section').data('id')
@@ -54,8 +49,6 @@ const onUpdateList = (event) => {
 
 const addHandlers = () => {
   $('.create-checklist').on('submit', onCreateList)
-  $('#show-checklists').on('click', onGetLists)
-  $('#hide-checklists').on('click', onHideLists)
   $('.checklists-display').on('click', '#delete-button', onDeleteList)
   $('.checklists-display').on('click', '#edit-button', onClickEdit)
   $('.update-checklist').on('submit', onUpdateList)

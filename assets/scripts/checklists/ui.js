@@ -33,13 +33,8 @@ const showChecklistSuccess = (data) => {
   $('#instructions').val(currentChecklist.instructions)
 }
 
-const hideLists = () => {
-  $('.checklists-display').empty()
-}
-
 module.exports = {
   getChecklistsSuccess,
-  hideLists,
   failure,
   showChecklistSuccess
 }
