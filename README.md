@@ -1,5 +1,5 @@
 # PetConnector - Client
-My second project is a full-stack web app that allows pet owners to create and save checklists to share with pet sitters.
+The second project I built in General Assembly Boston's WDI bootcamp is a full-stack web app that allows pet owners to create and save checklists to share with pet sitters.
 
 - Deployed front end: https://catherineguo.github.io/pet-connector-client/
 - Back end repo: https://github.com/catherineguo/pet-connector-api
@@ -11,6 +11,9 @@ Technologies used in this project: JavaScript, Handlebars, jQuery, AJAX, Bootstr
 To use PetConnector, you'll need to create an account. Once you have an account, you can simply click "New Checklist" to create a new checklist. Your checklists are automatically saved so you can view and edit them later. You can also delete checklists that you don't need anymore by clicking the "Delete" button beneath the checklist you want to remove.
 
 It's that simple!
+
+## PetConnector in Action
+![PetConnector](https://i.imgur.com/E0CCPhG.png)
 
 ## Planning
 My favorite part of planning any web app is drawing the wireframes. For this project, I wanted to keep the functionality in the nav bar at the top, and display checklists beneath the nav bar. You can see that in my wireframes: https://i.imgur.com/zRxK5hH.jpg
