@@ -12,7 +12,6 @@ To use PetConnector, you'll need to create an account. Once you have an account,
 
 It's that simple!
 
-## PetConnector in Action
 ![PetConnector](https://i.imgur.com/E0CCPhG.png)
 
 ## Planning
