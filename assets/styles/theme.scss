@@ -6,7 +6,7 @@ body {
 
 .landing-page {
   color: $black-font-color;
-  margin: $margin;
+  margin: 5%;
 }
 
 .alert-container {
@@ -140,4 +140,19 @@ form {
 .new-checklist-button:hover {
   background-color: darken(#FF7F00, 10%);
   border-color: darken(#FF7F00, 10%);
+}
+
+@media (max-width: 450px) {
+  .landing-page {
+    margin: 10%;
+  }
+
+  .brand-name {
+    height: auto;
+    width: 300px;
+  }
+
+  .paw-print {
+    width: 125px;
+  }
 }
