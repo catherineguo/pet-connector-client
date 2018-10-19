@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html style="display: none;">
+    <head>
+      <title>PetConnector</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+    <!-- START: Navbar layout -->
+    <nav class="navbar navbar-expand-md navbar-light mb-4" style="background-color: #e3f2fd; display: none;" id="navbar">
+      <a class="navbar-brand logo" href="#"><img src="https://i.imgur.com/tNiu3SB.png" alt="PetConnector"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto w-100 justify-content-start">
+          <button class="btn btn-success btn-block-xs new-checklist-button" type="button" data-toggle="modal" data-target=".new-checklist-modal">New Checklist</button>
+        </ul>
+        <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link change-password-link" href="#" data-toggle="modal" data-target=".password-modal">Change Password</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link sign-out" href="#">Sign Out</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- END: Navbar layout -->
+
+    <!-- START: Container for error messages to the user -->
+    <section class="alert-container" id="message">
+    </section>
+    <!-- END: Container for error messages to the user -->
+
+    <!-- START: Landing page / sign in page layout  -->
+    <!-- Title / subtitle on left -->
+    <div class="row landing-page">
+      <div class="col-sm-6 pet-connector-title">
+        <img class='brand-name' src="https://i.imgur.com/tNiu3SB.png">
+        <p>Save checklists to share with your pet sitters</p>
+        <img src="https://i.imgur.com/otSYZcg.png" alt="paw-print" class="paw-print">
+      </div>
+
+      <!-- Sign up form -->
+      <div class="col-sm-6">
+        <section class="sign-up-container" id="sign-up-container" style="display: none;">
+          <h2>Sign Up</h2>
+          <form class="form-signin" id='sign-up'>
+            <fieldset>
+              <input type="email" class="form-control input-lg" name="credentials[email]" placeholder="Email">
+              <input type="password" class="form-control input-lg" id="password" name="credentials[password]" placeholder="Password">
+              <input type="password" class="form-control input-lg" id="confirm-password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+              <button type="submit" class="btn btn-lg btn-primary btn-block">Sign Up</button>
+            </fieldset>
+          </form>
+          <a href="#" id="back-to-signin">I already have an account</a>
+        </section>
+
+        <!-- Sign in form -->
+        <section class="sign-in-container" id="sign-in-container">
+          <h2>Sign In</h2>
+          <form class="form-signin" id='sign-in'>
+            <fieldset>
+              <input type="email" class="form-control input-lg" name="credentials[email]" placeholder="Email">
+              <input type="password" class="form-control input-lg" name="credentials[password]" placeholder="Password">
+              <button type="submit" class="btn btn-lg btn-primary btn-block">Sign In</button>
+            </fieldset>
+          </form>
+          <a href="#" id="sign-up-link">I need to sign up for an account</a>
+        </section>
+      </div>
+    </div>
+    <!-- END: Landing page / sign in page layout  -->
+
+    <!-- START: Dashboard layout -->
+    <!-- Change password modal -->
+    <div class="dashboard-layout" style="display: none;">
+    <div class="modal fade bd-example-modal-md password-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <form class="change-password">
+              <h2>Change Password</h2>
+              <p class="password-message" id="password-message"></p>
+              <div class="form-group">
+                <input type="password" class="form-control input-lg" name="passwords[old]" placeholder="Current Password">
+                <input type="password" class="form-control input-lg" name="passwords[new]" placeholder="New Password">
+                <button type="submit" class="btn btn-primary">Change Password</button>
+              </div>
+            </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Create list modal -->
+    <div class="modal fade bd-example-modal-md new-checklist-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <form class="create-checklist">
+              <h2>New Checklist</h2>
+              <div class="form-group">
+                <label>Title</label>
+                <input type="text" class="form-control input-lg" name="checklist[title]" placeholder="Title">
+                <label>Start Date</label>
+                <input type="date" class="form-control input-lg" name="checklist[start_date]" placeholder="">
+                <label>End Date</label>
+                <input type="date" class="form-control input-lg" name="checklist[end_date]" placeholder="">
+                <label>Pet Name</label>
+                <input type="text" class="form-control input-lg" name="checklist[pet_name]" placeholder="Pet Name">
+                <label>Instructions / Checklist</label>
+                <textarea class="form-control" name="checklist[instructions]" placeholder="Instructions for pet sitter."></textarea>
+                <button type="submit" class="btn btn-primary">Create Checklist</button>
+              </div>
+            </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Edit list modal -->
+    <div class="modal fade bd-example-modal-md update-checklist-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <form class="update-checklist">
+              <h2>Edit Checklist</h2>
+              <div class="form-group">
+                <label>Title</label>
+                <input type="text" class="form-control input-lg" name="checklist[title]" placeholder="Title" id="title">
+                <label>Start Date</label>
+                <input type="date" class="form-control input-lg" name="checklist[start_date]" placeholder="" id="start_date">
+                <label>End Date</label>
+                <input type="date" class="form-control input-lg" name="checklist[end_date]" placeholder="" id="end_date">
+                <label>Pet Name</label>
+                <input type="text" class="form-control input-lg" name="checklist[pet_name]" placeholder="Pet Name" id="pet_name">
+                <label>Instructions / Checklist</label>
+                <textarea class="form-control" name="checklist[instructions]" placeholder="Instructions for pet sitter." id="instructions"></textarea>
+                <button type="submit" class="btn btn-primary">Update Checklist</button>
+              </div>
+            </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Checklists diplayed here -->
+    <div class="row checklists-display">
+
+    </div>
+  </div>
+  <!-- END: Dashboard layout -->
+  </body>
+</html>
